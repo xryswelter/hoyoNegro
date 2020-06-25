@@ -28,6 +28,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Look",
+                    "type": "Button",
+                    "id": "87e72768-74b5-4077-b5d6-ada56a24c086",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -142,17 +150,6 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "26dbedf6-e32f-4577-a12e-e23085d0672b",
-                    "path": "<Mouse>/delta",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
                     "name": "Float (Left Hand) 1.0",
                     "id": "d0482ac4-b9f8-4fe4-9821-2c8757ebf4b5",
                     "path": "1DAxis",
@@ -226,6 +223,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "26dbedf6-e32f-4577-a12e-e23085d0672b",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
