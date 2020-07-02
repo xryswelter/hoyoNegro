@@ -16,8 +16,8 @@ public class Player : MonoBehaviour
     //Head Controls
     public Transform playerBody;
     public Transform head;
-    private float _turnHead =0f;
-    private float _nod = 0f;
+    private float _turnHead;
+    private float _nod;
     public float _mouseSensitivity;
 
     //Awake and Lock Mouse
