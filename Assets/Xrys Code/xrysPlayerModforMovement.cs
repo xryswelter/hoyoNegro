@@ -21,6 +21,7 @@ public class PlayerCharacter : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        
         // Creating Vector3 variable for new movement by input
         Vector3 movement = new Vector3(_moveaxis.x, _floataxis, _moveaxis.y);
         body.AddForce(movement * _speed);
