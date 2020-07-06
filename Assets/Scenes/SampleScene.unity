@@ -531,7 +531,7 @@ MonoBehaviour:
   camera: {fileID: 963194227}
   turnSpeed: 5
   lerpSpeed: 3
-  _speed: 15
+  _speed: 50
 --- !u!54 &835275773
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -985,7 +985,18 @@ MonoBehaviour:
     m_ActionId: 68f6ac2f-ce92-46fb-9aa1-c2dcd2aecffc
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 460f1acb-bd07-4615-ad34-ceb3625b7387
     m_ActionName: Player/Interact[/Mouse/leftButton]
   - m_PersistentCalls:

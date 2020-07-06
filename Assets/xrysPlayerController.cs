@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class xrysPlayerController : MonoBehaviour
 {
     // Looking variables
-    public Camera camera;
+    public new Camera camera;
     public float turnSpeed;
     public float lerpSpeed = 3f;
     private Quaternion newCameraRotation;
@@ -54,8 +54,11 @@ public class xrysPlayerController : MonoBehaviour
 
 
         // Creating Vector3 variable for new movement by input
-        Vector3 movement = new Vector3(_moveaxis.x, _floataxis, _moveaxis.y);
-        body.AddForce(movement * _speed);
+        // Vector3 movement = new Vector3(_moveaxis.x, _floataxis, _moveaxis.y);
+        // Debug.Log($"The new direction is {movement}"); *** Can confirm movement is valid via debug.
+        body.AddForce(transform.forward*_speed*_moveaxis.x);
+        body.AddForce(transform.right*_speed*_moveaxis.y);
+        body.AddForce(transform.up*_speed*_floataxis);
 
     }
 
