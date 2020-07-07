@@ -507,11 +507,11 @@ GameObject:
   - component: {fileID: 835275776}
   - component: {fileID: 835275775}
   - component: {fileID: 835275774}
-  - component: {fileID: 835275772}
   - component: {fileID: 835275773}
+  - component: {fileID: 835275772}
   m_Layer: 0
-  m_Name: Capsule
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -525,10 +525,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 835275771}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fd67846ae8b830438c8b1a3db66ac1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 456c4be4274b6dc4dac5f69e4dd3a392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 15
+  camera: {fileID: 963194227}
+  turnSpeed: 5
+  lerpSpeed: 3
+  _speed: 50
 --- !u!54 &835275773
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -540,10 +543,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!136 &835275774
 CapsuleCollider:
@@ -556,7 +559,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 1.34
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &835275775
@@ -614,7 +617,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835275771}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963194228}
@@ -634,7 +637,7 @@ GameObject:
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Head
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -673,7 +676,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 39.2
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -937,7 +940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 80a2bcc62449abb4981f448ebd22646c,
+  m_Actions: {fileID: -944628639613478452, guid: 08b266a46d6e7234da2ce73caa96aa61,
     type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
@@ -964,12 +967,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: fd73f4e2-1c32-42e9-9e6b-37abf4f2794d
-    m_ActionName: PlayerControls/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/i,/Keyboard/k,/Keyboard/j,/Keyboard/l,/Mouse/delta]
+    m_ActionId: 6d492368-e6ba-4c41-baf4-58f6bfaefe62
+    m_ActionName: Player/Move[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 835275772}
-        m_MethodName: HandleFloat
+        m_MethodName: Look
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -979,15 +982,61 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 059fe4dd-35e7-4b03-8060-60e43ba6b133
-    m_ActionName: PlayerControls/Float[/Keyboard/rightShift,/Keyboard/space,/Keyboard/leftShift,/Keyboard/space]
+    m_ActionId: 68f6ac2f-ce92-46fb-9aa1-c2dcd2aecffc
+    m_ActionName: Player/Look[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 460f1acb-bd07-4615-ad34-ceb3625b7387
+    m_ActionName: Player/Interact[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 34926376-9f6d-42a7-910b-dd4d80ad38e4
-    m_ActionName: PlayerControls/Interact[/Mouse/rightButton]
+    m_ActionId: 8c6ee165-58a3-4620-8e3f-84b2188cbaa9
+    m_ActionName: UI/Navigate
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7ee58294-1c56-452b-b0d4-c8c065f70cec
+    m_ActionName: UI/Submit
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c7ecdafa-9254-4e73-bcb8-c63082b60840
+    m_ActionName: UI/Cancel
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6d754209-5fc8-473d-bbd0-067e331a56a7
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f8c6eff9-6e89-4a32-b55e-5517f51d6f43
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 835275772}
+        m_MethodName: Buoyancy
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 059243fc-ca51-408d-9a97-835d425f4674
+    m_ActionName: Player/Float[/Keyboard/leftShift,/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: PlayerControls
+  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!4 &1298045821
