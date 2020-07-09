@@ -531,7 +531,7 @@ MonoBehaviour:
   camera: {fileID: 963194227}
   turnSpeed: 5
   lerpSpeed: 3
-  _speed: 50
+  _speed: 75
 --- !u!54 &835275773
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -970,36 +970,6 @@ MonoBehaviour:
     m_ActionId: 6d492368-e6ba-4c41-baf4-58f6bfaefe62
     m_ActionName: Player/Move[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 835275772}
-        m_MethodName: Look
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 68f6ac2f-ce92-46fb-9aa1-c2dcd2aecffc
-    m_ActionName: Player/Look[/Mouse/delta]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 460f1acb-bd07-4615-ad34-ceb3625b7387
-    m_ActionName: Player/Interact[/Mouse/leftButton]
-  - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 8c6ee165-58a3-4620-8e3f-84b2188cbaa9
     m_ActionName: UI/Navigate
@@ -1009,12 +979,7 @@ MonoBehaviour:
     m_ActionName: UI/Submit
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 34926376-9f6d-42a7-910b-dd4d80ad38e4
-    m_ActionName: PlayerControls/Interact[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 87e72768-74b5-4077-b5d6-ada56a24c086
-    m_ActionName: PlayerControls/Look[/Mouse/delta]
+
     m_ActionId: c7ecdafa-9254-4e73-bcb8-c63082b60840
     m_ActionName: UI/Cancel
   - m_PersistentCalls:
@@ -1040,6 +1005,29 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 059243fc-ca51-408d-9a97-835d425f4674
     m_ActionName: Player/Float[/Keyboard/leftShift,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c7ecdafa-9254-4e73-bcb8-c63082b60840
+    m_ActionName: UI/Cancel
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 835275772}
+        m_MethodName: Look
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 68f6ac2f-ce92-46fb-9aa1-c2dcd2aecffc
+    m_ActionName: Player/Look[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 460f1acb-bd07-4615-ad34-ceb3625b7387
+    m_ActionName: Player/Interact[/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
