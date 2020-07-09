@@ -1009,6 +1009,12 @@ MonoBehaviour:
     m_ActionName: UI/Submit
   - m_PersistentCalls:
       m_Calls: []
+    m_ActionId: 34926376-9f6d-42a7-910b-dd4d80ad38e4
+    m_ActionName: PlayerControls/Interact[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 87e72768-74b5-4077-b5d6-ada56a24c086
+    m_ActionName: PlayerControls/Look[/Mouse/delta]
     m_ActionId: c7ecdafa-9254-4e73-bcb8-c63082b60840
     m_ActionName: UI/Cancel
   - m_PersistentCalls:
