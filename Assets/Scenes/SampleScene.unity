@@ -979,13 +979,11 @@ MonoBehaviour:
     m_ActionName: UI/Submit
   - m_PersistentCalls:
       m_Calls: []
-<<<<<<< Updated upstream
+
     m_ActionId: c7ecdafa-9254-4e73-bcb8-c63082b60840
     m_ActionName: UI/Cancel
   - m_PersistentCalls:
       m_Calls: []
-=======
->>>>>>> Stashed changes
     m_ActionId: 6d754209-5fc8-473d-bbd0-067e331a56a7
     m_ActionName: UI/Point[/Mouse/position]
   - m_PersistentCalls:
