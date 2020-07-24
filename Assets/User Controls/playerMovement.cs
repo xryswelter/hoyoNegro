@@ -9,6 +9,10 @@ public class playerMovement : MonoBehaviour
     public CharacterController controller;   
     public float movementSpeed = 12f;
 
+    private void Start()
+    {
+        controller = GetComponent<CharacterController>();
+    }
 
     // Update is called once per frame
     void Update()
