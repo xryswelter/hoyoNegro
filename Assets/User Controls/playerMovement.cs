@@ -8,10 +8,12 @@ public class playerMovement : MonoBehaviour
 {
     public CharacterController controller;   
     public float movementSpeed = 12f;
+    public AudioSource clickSound;
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
+        clickSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -24,10 +26,15 @@ public class playerMovement : MonoBehaviour
 
         //Create Vector3 variable
         Vector3 move = transform.right * x + transform.up * y + transform.forward * z;
-        Debug.Log("x: " + x);
-        Debug.Log("z: " + z);
-        Debug.Log(move);
+        //Debug.Log("x: " + x);
+        //Debug.Log("z: " + z);
+        //Debug.Log(move);
 
         controller.Move(move*movementSpeed*Time.deltaTime);
+    }
+
+    public void makeSound()
+    {
+        clickSound.Play();
     }
 }

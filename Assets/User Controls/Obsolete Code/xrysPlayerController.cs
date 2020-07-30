@@ -18,7 +18,7 @@
 //    private Vector2 _moveaxis;
 //    private float _floataxis;
 //    public float _speed;
-    
+
 //    private void Awake()
 //    {
 //        Cursor.lockState = CursorLockMode.Locked;
@@ -27,7 +27,7 @@
 
 //        newForwardRotation = transform.rotation;
 //        newCameraRotation = camera.transform.localRotation;
-      
+
 //    }
 
 //    float yRotation;
@@ -54,10 +54,10 @@
 
 
 //        // Creating Vector3 variable for new movement by input
-//        body.AddForce(transform.forward*_speed*_moveaxis.y);
-//        body.AddForce(transform.right*_speed*_moveaxis.x);
-//        body.AddForce(transform.up*_speed*_floataxis);
-        
+//        body.AddForce(transform.forward * _speed * _moveaxis.y);
+//        body.AddForce(transform.right * _speed * _moveaxis.x);
+//        body.AddForce(transform.up * _speed * _floataxis);
+
 //    }
 
 //    //Movement call function
