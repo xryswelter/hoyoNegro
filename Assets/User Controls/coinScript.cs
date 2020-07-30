@@ -29,11 +29,12 @@ public class coinScript : MonoBehaviour
     {
 
         //
-        if (isPickedUp == false && player != null)
+        if (isPickedUp == false && playerIsInTriggerArea )
         {
             if (Input.GetMouseButtonDown(1))
             {
                 player.GetComponent<playerMovement>().makeSound();
+                Debug.Log(gameObject.name);
                 switch (animalType)
                 {
                     case "bear":
