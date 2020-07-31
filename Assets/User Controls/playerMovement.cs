@@ -9,6 +9,7 @@ public class playerMovement : MonoBehaviour
     public CharacterController controller;   
     public float movementSpeed = 12f;
     public AudioSource clickSound;
+    
 
     private void Start()
     {

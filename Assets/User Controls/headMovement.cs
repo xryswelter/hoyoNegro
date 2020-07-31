@@ -1,16 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class headMovement : MonoBehaviour
 {
     //Mouse Variables
-    public float mouseSensitivity = 100f;
+        public float mouseSensitivity = 100f;
+    
+    //Setting Variables
+        public AudioListener volumeSlider;
 
 
     //Body Variables
     public Transform playerBody;
     float xRotation = 0f;
+
+    //Start of Game
+
+    void Start()
+    {
+        volumeSlider = GetComponent<AudioListener>();
+    }
 
     // Start is called before the first frame update
     void Awake()
@@ -36,8 +47,15 @@ public class headMovement : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
     }
+
+    //SETTINGS
     public void changeSensitivity(float sensitivity)
     {
         mouseSensitivity = Mathf.Lerp(50, 150, sensitivity);
+    }
+
+    public void changeMasterVolume(float slider)
+    {
+        AudioListener.volume = slider;
     }
 }
