@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 public class headMovement : MonoBehaviour
 {
     //Mouse Variables
-        public float mouseSensitivity = 100f;
+        public float mouseSensitivity = 150f;
     
     //Setting Variables
         public AudioListener volumeSlider;
@@ -51,7 +51,7 @@ public class headMovement : MonoBehaviour
     //SETTINGS
     public void changeSensitivity(float sensitivity)
     {
-        mouseSensitivity = Mathf.Lerp(50, 150, sensitivity);
+        mouseSensitivity = Mathf.Lerp(75, 225, sensitivity);
     }
 
     public void changeMasterVolume(float slider)
