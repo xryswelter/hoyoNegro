@@ -76,9 +76,9 @@ public class coinScript : MonoBehaviour
                     case "tiger":
                         {
                             animalName.sabertoothCount += 1;
-                            animalName.sabertoothText.text = animalName.sabertoothCount + "/4";
+                            animalName.sabertoothText.text = animalName.sabertoothCount + "/2";
                             Debug.Log(animalName.sabertoothCount);
-                            if (animalName.sabertoothCount >= 4)
+                            if (animalName.sabertoothCount >= 2)
                             {
                                 animalName.sabertoothText.transform.parent.GetComponent<Button>().interactable = true; 
                             }
